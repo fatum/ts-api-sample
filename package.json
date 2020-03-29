@@ -10,7 +10,9 @@
     "precommit": "yarn pretty-quick --staged",
     "format": "yarn pretty-quick",
     "graphql": "yarn nodemon --exec 'yarn ts-node' graphql/server.ts -e ts,graphql",
-    "schema": "yarn graphql-codegen --config graphql-gen.yaml"
+    "schema": "yarn graphql-codegen --config graphql-gen.yaml",
+    "db:create": "yarn sequelize db:create",
+    "db:migrate": "yarn sequelize db:migrate"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
