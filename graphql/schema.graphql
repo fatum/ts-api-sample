@@ -1,0 +1,55 @@
+scalar Date
+scalar Timestamp
+scalar Decimal
+
+type Loan {
+  id: ID!
+  properties: [Property!]
+  valuation: Decimal!
+  principal: Decimal!
+  interest: Decimal!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+type Property {
+  id: ID!
+  address1: String!
+  address2: String!
+  city: String!
+  state: String!
+  zip: String!
+  loans: [Loan!]!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+type Query {
+  getLoans: [Loan!]!
+}
+
+type Mutation {
+  addLoan(request: LoanRequest!): LoanResponse!
+  removeLoan(loanId: ID!): LoanResponse!
+  updateLoan(loanId: ID!, request: LoanRequest!): LoanResponse!
+}
+
+type LoanResponse {
+  errors: [String!]
+  loan: Loan
+}
+
+input PropertyRequest {
+  address1: String!
+  address2: String!
+  city: String!
+  state: String!
+  zip: String!
+}
+
+input LoanRequest {
+  properties: [PropertyRequest!]
+  valuation: Decimal!
+  principal: Decimal!
+  interest: Decimal!
+}
