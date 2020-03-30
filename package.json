@@ -15,7 +15,6 @@
     "db:migrate": "yarn sequelize db:migrate"
   },
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
     "@types/bluebird": "^3.5.30",
     "@types/mathjs": "^6.0.4",
     "@types/node": "^13.9.3",
@@ -29,12 +28,10 @@
     "decimal.js": "^10.2.0",
     "express": "^4.17.1",
     "graphql": "^14.6.0",
-    "http": "^0.0.0",
     "mathjs": "^6.6.1",
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.5",
-    "sqlite3": "^4.1.1",
     "typescript": "^3.8.3",
     "validator": "^13.0.0"
   },
