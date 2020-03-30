@@ -1,4 +1,4 @@
-import updateLoan from "./loan/update";
+import updateLoan from "../api/loan/update";
 
 const loan = {
   id: 1,

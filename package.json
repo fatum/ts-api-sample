@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "operation": "yarn ts-node api/run.ts -e ts",
-    "poly": "yarn ts-node api/polymorphic.ts -e ts",
-    "math": "yarn ts-node api/math.ts -e ts",
+    "operation": "yarn ts-node examples/run.ts -e ts",
+    "poly": "yarn ts-node examples/polymorphic.ts -e ts",
     "precommit": "yarn pretty-quick --staged",
     "format": "yarn pretty-quick",
     "graphql": "yarn nodemon --exec 'yarn ts-node' graphql/server.ts -e ts,graphql",
