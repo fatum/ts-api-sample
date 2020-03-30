@@ -1,5 +1,4 @@
-import { IResolvers } from "./types";
-import { StringIndexed, AddLoanInputs } from "./utils";
+import { Resolvers, AddLoanInputs } from "./utils";
 import LoanModel from "../api/loan/model";
 import { createLoan } from "../api/loan/create";
 
@@ -8,7 +7,7 @@ const user = {
   roles: ["admin"],
 };
 
-export const resolvers: StringIndexed<IResolvers> = {
+export const resolvers: Resolvers = {
   Query: {
     getLoans() {
       return LoanModel.findAll();

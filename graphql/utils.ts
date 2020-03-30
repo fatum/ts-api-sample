@@ -1,3 +1,4 @@
+import { IResolvers } from "./types";
 import { RequireFields, MutationAddLoanArgs } from "./types";
 
 interface StringIndexSignatureInterface {
@@ -6,7 +7,7 @@ interface StringIndexSignatureInterface {
 
 // This type is needed for apollo server type safety
 type StringIndexed<T> = T & StringIndexSignatureInterface;
-
+type Resolvers = StringIndexed<IResolvers>;
 type AddLoanInputs = RequireFields<MutationAddLoanArgs, "request">;
 
-export { StringIndexed, AddLoanInputs };
+export { Resolvers, AddLoanInputs };
